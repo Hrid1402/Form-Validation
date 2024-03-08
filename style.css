@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins&display=swap');
+
+
 html, body{
     height: 100%;
 }
 body{
-    background-color: aqua;
+    background-image: url(images/mountain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -10,10 +16,22 @@ body{
     align-items: center;  
 }
 .mainForm{
-    background-color: rgb(204, 204, 251);
-    height: 780px;
+    background-color: rgba(2, 26, 64, 0.086);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.261);
+    border-radius: 48px;
+    height: 900px;
     width: 750px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, .1);
 }
+.mainForm h1{
+    font-size: 3.8125em;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    color: #efefef;
+    font-family: 'Poppins', sans-serif;
+}
+
 .formContent{
     display: flex;
     flex-direction: column;
@@ -25,17 +43,19 @@ body{
     display: block;
     width: 400px;
     height: 40px;
-    border: 1px solid black;
+    border: 2px solid white;
     outline: none;
+    background-color: rgba(255, 255, 255, 0.068);
+    color: white;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 35px;
 }
-
-.formContent input:valid{
-    background-color: greenyellow;
-}
-
-.formContent input:invalid{
-    background-color: rgb(238, 151, 151);
-    border: 1px solid red;
+label{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 25px;
 }
 .emailError, 
 .zipCodeError,
@@ -45,4 +65,23 @@ body{
     color: red;
     margin-top: 5px;
     opacity: 0%;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(77, 1, 1);
+}
+.submitBTN{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(20, 20, 20);
+    font-size: 28px;
+    border-radius: 35px;
+    padding: 10px 87px;
+    border: none;
+    transition: background-color 350ms, color 350ms;
+}
+.submitBTN:hover{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: rgb(33, 33, 35);;
+    font-size: 28px;
+    border-radius: 35px;
+    padding: 10px 87px;
 }
