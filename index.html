@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainForm">
+        <form id="form" action="https://httpbin.org/post" method="post" class="formContent">
+                <h1>Form</h1>
+                    <label for="email">
+                        Email
+                        <input type="email" id="email"  name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                        <h3 class="emailError" id="emailError">Error</h3>
+                    </label>
+            
+                    <label for="country">
+                        Country
+                        <input type="text" id="country" name="country" pattern="[^0-9]+" required>
+                        <h3 class="contryError" id="contryError">Error</h3>
+                    </label>
+            
+                    <label for="zipCode">
+                        Zip Code
+                        <input type="text" id="zipCode" name="zipCode" pattern="[0-9]*" required>
+                        <h3 class="zipCodeError" id="zipCodeError">Error</h3>
+                    </label>
+            
+                    <label for="password">
+                        Password
+                        <input type="password" id="password" name="password" minlength="8" required>
+                        <h3 class="passwordError" id="passwordError">Error</h3>
+                    </label>
+            
+                    <label for="C_password">
+                        Confirm Password
+                        <input type="password" id="C_password" minlength="8" required>
+                        <h3 class="C_passwordError" id="C_passwordError">Error</h3>
+
+                    </label>
+            
+                    <button type="submit" form="form">Submit</button>
+
+        </form>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
